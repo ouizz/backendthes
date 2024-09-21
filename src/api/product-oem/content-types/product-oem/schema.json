@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_oems",
+  "info": {
+    "singularName": "product-oem",
+    "pluralName": "product-oems",
+    "displayName": "Product OEM",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AttributeProduct": {
+      "type": "string"
+    },
+    "FullName": {
+      "type": "string"
+    },
+    "TypeProduct": {
+      "type": "string"
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "product_oem_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-oem-category.product-oem-category",
+      "mappedBy": "product_oems"
+    },
+    "ColorFront": {
+      "type": "enumeration",
+      "enum": [
+        "Green-B7D66C",
+        "Pink-F8008A",
+        "Yellow-F6C64D",
+        "Blue-6AD8FE"
+      ]
+    }
+  }
+}

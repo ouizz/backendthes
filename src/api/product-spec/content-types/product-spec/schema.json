@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_specs",
+  "info": {
+    "singularName": "product-spec",
+    "pluralName": "product-specs",
+    "displayName": "Product Spec",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "product_spec_tables": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-spec-table.product-spec-table",
+      "mappedBy": "product_specs"
+    },
+    "product_spec_categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-spec-category.product-spec-category",
+      "inversedBy": "product_specs"
+    },
+    "Popup": {
+      "type": "boolean"
+    },
+    "Kindfruit": {
+      "type": "string"
+    }
+  }
+}

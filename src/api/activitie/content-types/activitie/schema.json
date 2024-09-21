@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activities",
+  "info": {
+    "singularName": "activitie",
+    "pluralName": "activities",
+    "displayName": "Activitie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Detail": {
+      "type": "richtext"
+    },
+    "ShortDetail": {
+      "type": "richtext"
+    },
+    "MoreImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Highlight": {
+      "type": "boolean"
+    },
+    "Imagehightlight": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "homeorder": {
+      "type": "enumeration",
+      "enum": [
+        "no1",
+        "no2"
+      ]
+    }
+  }
+}

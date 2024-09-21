@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_ourbrand_categories",
+  "info": {
+    "singularName": "product-ourbrand-category",
+    "pluralName": "product-ourbrand-categories",
+    "displayName": "Product Ourbrand Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "product_ourbrands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-ourbrand.product-ourbrand",
+      "inversedBy": "product_ourbrand_categories"
+    }
+  }
+}
